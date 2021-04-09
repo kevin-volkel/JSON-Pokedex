@@ -229,3 +229,26 @@ path = path.split('.')[0]
 console.log(path)
 let char = pokemon[path]
 console.table(char)
+
+const SECTION = document.getElementById('section')
+const HEADER = document.getElementById('header')
+
+init(char)
+function init(obj){
+    createHeader(obj)
+    createSection(obj)
+}
+
+function createHeader(jsonObj){
+    const H1 = document.createElement('h1')
+    const P1 = document.createElement('p')
+
+    H1.textContent = jsonObj['name']
+    P1.textContent = jsonObj['id']
+
+    HEADER.appendChild(H1)
+    HEADER.appendChild(P1)
+}
+function createSection(){
+
+}
