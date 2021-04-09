@@ -222,9 +222,8 @@ let pokemon = {
       }
 }
 
-let path = window.location.pathname;
-path = path.slice(1)
-path = path.split('.')[0]
+let path = window.location.pathname.slice(1)
+path = path.split('/').pop().split('.')[0]
 
 console.log(path)
 let char = pokemon[path]
