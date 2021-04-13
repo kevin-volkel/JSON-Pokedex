@@ -132,23 +132,23 @@
 .half .slider-con .slider .btn-container .back {
   position: relative;
   z-index: 100;
-  font-size: 30px;
+  font-size: 34px;
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
-  color: #666665;
+  color: black;
 }
 
 .half .slider-con .slider .btn-container .forward {
   position: relative;
   z-index: 100;
-  font-size: 30px;
+  font-size: 34x;
   background-color: transparent;
   outline: none;
   border: none;
   cursor: pointer;
-  color: #555455;
+  color: black;
 }
 
 .left {
@@ -161,8 +161,7 @@
   width: 60vw;
   height: 100vh;
   position: relative;
-  background: -webkit-gradient(linear, left top, right top, from(#f56f6f), to(plum));
-  background: linear-gradient(to right, #f56f6f, plum);
+  background: linear-gradient(100deg, #f56f6f, #669be0);
   -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
   margin: 0px;

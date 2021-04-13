@@ -4,9 +4,43 @@
 
 }
 
+$border-color: #AD2500;
+$background-color: #eeeeee;
+
 html{
-    width: 75%;
-    margin: 0 auto;
-    text-align: center;
+    width: 30vw;
+    margin: 0 auto; 
+}
+
+header{
+    text-transform: capitalize;
+    margin-top: 2.5rem;
+    border: $border-color 3px solid;
+    background: $background-color;
+    padding: 5px;
+}
+
+section{
+    background: $background-color;
+    border: $border-color 3px solid;
+    border-top: none;
+    height: 75vh;
+    div:nth-of-type(1){
+        display: flex;
+        justify-content: space-evenly;
+        p{
+            margin: 10px 0;
+            font-size: 26px;
+            font-weight: bold;
+            background-color: rgba(240, 69, 83, 0.541);
+            border-radius: 5px;
+            width: 4rem;
+            text-align: center;
+        }
+        border-bottom: $border-color 3px solid;
+    }
+
+    
+
 }
 
