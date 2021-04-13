@@ -225,8 +225,8 @@ let pokemon = {
 let path = window.location.pathname.slice(1)
 let [pathName] = path.split('/').pop().split('.')
 
-console.log(pathName,file)
-let char = pokemon[path]
+console.log(pathName)
+let char = pokemon[pathName]
 console.table(char)
 
 const SECTION = document.getElementById('section')
@@ -245,6 +245,9 @@ function createHeader(jsonObj){
     H1.textContent = jsonObj['name']
     P1.textContent = jsonObj['id']
 
+
+
+    
     HEADER.appendChild(H1)
     HEADER.appendChild(P1)
 }

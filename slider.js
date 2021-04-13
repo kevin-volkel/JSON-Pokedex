@@ -48,3 +48,8 @@ const sliderComponent = function () {
   forwardBtn.addEventListener("click", nextSlide);
 };
 sliderComponent();
+
+
+const str = 'joshua'
+const reverseStr = str.split('').reverse().join('')
+console.log(reverseStr)
