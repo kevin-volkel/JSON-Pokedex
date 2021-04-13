@@ -219,8 +219,10 @@ let pokemon = {
 
 let path = window.location.pathname
 let [pathName] = path.split('/').pop().split('.')
+
 console.log(pathName)
 let char = pokemon[pathName]
+console.log(char)
 
 const SECTION = document.getElementById('section')
 const HEADER = document.getElementById('header')
@@ -235,8 +237,8 @@ function createHeader(jsonObj){
   const H1 = document.createElement('h1')
   const H2 = document.createElement('h2')
 
-  H1.textContent = `${jsonObj['name']} | ${jsonObj['id']}`
-  H2.textContent = `${jsonObj['height']} ft | ${jsonObj['weight']} lbs`
+  H1.innerHTML = `<div>${jsonObj['name']} </div>`
+  H2.innerHTML = `<div>ID: ${jsonObj['id']}</div><div>Height: ${jsonObj['height']} ft </div> <div>Weight: ${jsonObj['weight']} lbs</div>`
 
   HEADER.appendChild(H1)
   HEADER.appendChild(H2)
@@ -247,8 +249,8 @@ function createTypes(jsonObj){
   const DIV = document.createElement('div')
   console.log(types)
   for(type of types){
-    const P3 = document.createElement('p3');
-    P3.textContent = type['type']['name'] + ' '
+    const P3 = document.createElement('p');
+    P3.textContent = type['type']['name']
     DIV.appendChild(P3)
   }
   SECTION.appendChild(DIV)
@@ -299,7 +301,7 @@ function createStats (obj){
         const baseStat = document.createElement('p');
         const effort = document.createElement('p');
             const stat = document.createElement('p');
-            
+
           for(let key in curr){
       
             baseStat.textContent = obj['stats'][i]['base_stat'];
