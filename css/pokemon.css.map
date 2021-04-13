@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,CAAC,EAAE,CAAC,AAAA,OAAO,EAAE,CAAC,AAAA,QAAQ,CAAA;EAClB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CAEb;;AAED,AAAA,IAAI,CAAA;EACA,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,MAAM;CACrB",
     "sources": [
         "../pokemon.scss"
     ],
