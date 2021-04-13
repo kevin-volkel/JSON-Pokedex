@@ -222,11 +222,10 @@ let pokemon = {
       }
 }
 
-let path = window.location.pathname;
-path = path.slice(1)
-path = path.split('.')[0]
+let path = window.location.pathname
+let [pathName] = path.split('/').pop().split('.')
 
-let char = pokemon[path]
+let char = pokemon[pathName]
 
 const SECTION = document.getElementById('section')
 const HEADER = document.getElementById('header')
