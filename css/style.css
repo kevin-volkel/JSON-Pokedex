@@ -312,4 +312,15 @@ strong {
 .cream {
   color: #b49d7e;
 }
+
+footer {
+  background-color: #6A6F70;
+  color: #E5E0DF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 /*# sourceMappingURL=style.css.map */
