@@ -1,1 +1,11 @@
-/* No CSS *//*# sourceMappingURL=pokemon.css.map */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+/*# sourceMappingURL=pokemon.css.map */
