@@ -223,9 +223,9 @@ let pokemon = {
 }
 
 let path = window.location.pathname.slice(1)
-path = path.split('/').pop().split('.')[0]
+let [pathName] = path.split('/').pop().split('.')
 
-console.log(path)
+console.log(pathName,file)
 let char = pokemon[path]
 console.table(char)
 
