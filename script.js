@@ -222,35 +222,44 @@ let pokemon = {
       }
 }
 
-let path = window.location.pathname.slice(1)
+let path = window.location.pathname
 let [pathName] = path.split('/').pop().split('.')
-
 console.log(pathName)
 let char = pokemon[pathName]
-console.table(char)
 
 const SECTION = document.getElementById('section')
 const HEADER = document.getElementById('header')
 
 init(char)
 function init(obj){
-    createHeader(obj)
-    createSection(obj)
+  createHeader(obj)
+  createTypes(obj)
+  createBody(obj)
 }
 
 function createHeader(jsonObj){
-    const H1 = document.createElement('h1')
-    const P1 = document.createElement('p')
+  const H1 = document.createElement('h1')
+  const H2 = document.createElement('h2')
 
-    H1.textContent = jsonObj['name']
-    P1.textContent = jsonObj['id']
+  H1.textContent = `${jsonObj['name']} | ${jsonObj['id']}`
+  H2.textContent = `${jsonObj['height']} ft | ${jsonObj['weight']} lbs`
 
-
-
-    
-    HEADER.appendChild(H1)
-    HEADER.appendChild(P1)
+  HEADER.appendChild(H1)
+  HEADER.appendChild(H2)
 }
-function createSection(){
 
+function createTypes(jsonObj){
+  let types = jsonObj['types'];
+  const DIV = document.createElement('div')
+  console.log(types)
+  for(type of types){
+    const P3 = document.createElement('p3');
+    P3.textContent = type['type']['name']
+    DIV.appendChild(P3)
+  }
+  SECTION.appendChild(DIV)
+}
+
+function createBody(jsonObj){
+  return true;
 }
