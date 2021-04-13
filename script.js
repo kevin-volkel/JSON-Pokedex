@@ -1,79 +1,74 @@
 let pokemon = {
     charmander: {
-        "abilities": [
-          {
-            "name": "blaze"
-          },
-          {
-            "name": "solar-power"
+      //ul
+      "abilities": [
+        {
+          "name": "blaze"
+        },
+        {
+          "name": "solar-power"
+        }
+      ],
+      "base_experience": 62,
+      "height": 6,
+      "id": 4,
+      "is_default": true,
+      "name": "charmander",
+      "order": 5,
+      "stats": [
+        {
+          "base_stat": 39,
+          "effort": 0,
+          "stat": {
+            "name": "hp"
           }
-        ],
-        "base_experience": 240,
-        "height": 17,
-        "id": 6,
-        "is_default": true,
-        "name": "charizard",
-        "order": 7,
-        "stats": [
-          {
-            "base_stat": 78,
-            "effort": 0,
-            "stat": {
-              "name": "hp"
-            }
-          },
-          {
-            "base_stat": 84,
-            "effort": 0,
-            "stat": {
-              "name": "attack"
-            }
-          },
-          {
-            "base_stat": 78,
-            "effort": 0,
-            "stat": {
-              "name": "defense"
-            }
-          },
-          {
-            "base_stat": 109,
-            "effort": 3,
-            "stat": {
-              "name": "special-attack"
-            }
-          },
-          {
-            "base_stat": 85,
-            "effort": 0,
-            "stat": {
-              "name": "special-defense"
-            }
-          },
-          {
-            "base_stat": 100,
-            "effort": 0,
-            "stat": {
-              "name": "speed"
-            }
+        },
+        {
+          "base_stat": 52,
+          "effort": 0,
+          "stat": {
+            "name": "attack"
           }
-        ],
-        "types": [
-          {
-            "slot": 1,
-            "type": {
-              "name": "fire"
-            }
-          },
-          {
-            "slot": 2,
-            "type": {
-              "name": "flying"
-            }
+        },
+        {
+          "base_stat": 43,
+          "effort": 0,
+          "stat": {
+            "name": "defense"
           }
-        ],
-        "weight": 905
-      },
+        },
+        {
+          "base_stat": 60,
+          "effort": 0,
+          "stat": {
+            "name": "special-attack"
+          }
+        },
+        {
+          "base_stat": 50,
+          "effort": 0,
+          "stat": {
+            "name": "special-defense"
+          }
+        },
+        {
+          "base_stat": 65,
+          "effort": 1,
+          "stat": {
+            "name": "speed"
+          }
+        }
+      ],
+      "types": [
+        {
+          "slot": 1,
+          "type": {
+            "name": "fire"
+          }
+        }
+      ],
+      "weight": 85
+    },
 
       charmeleon: {
         "abilities": [
@@ -234,7 +229,6 @@ init(char)
 function init(obj){
   createHeader(obj)
   createTypes(obj)
-  createBody(obj)
 }
 
 function createHeader(jsonObj){
@@ -254,12 +248,99 @@ function createTypes(jsonObj){
   console.log(types)
   for(type of types){
     const P3 = document.createElement('p3');
-    P3.textContent = type['type']['name']
+    P3.textContent = type['type']['name'] + ' '
     DIV.appendChild(P3)
   }
   SECTION.appendChild(DIV)
 }
 
-function createBody(jsonObj){
-  return true;
+
+function createStats (obj){
+  let names = ['abilities','base experience','stats']
+
+    new Array(3).fill('').forEach((_,i) => {
+      const container = document.createElement('div')
+      SECTION.append(container)
+    })
+    console.log(SECTION)
+
+    let abilities = SECTION.querySelectorAll('div')[1]
+    let base_experience = SECTION.querySelectorAll('div')[2]
+    let stats = SECTION.querySelectorAll('div')[3]
+    let containers = [abilities,base_experience,stats]
+
+    new Array(3).fill('').forEach((_,i) => {
+      let title = document.createElement('h4')
+      title.textContent = names[i];
+        containers[i].append(title);
+    })
+    let baseExperince = containers.find(curr => {
+      return curr.querySelector('h4').textContent == 'base experience';
+    })
+    //base experinece value
+    let p = document.createElement('p')
+    p.textContent = obj['base_experience']
+    baseExperince.append(p)
+/**
+ * [
+          {
+            "base_stat": 78,
+            "effort": 0,
+            "stat": {
+              "name": "hp"
+            }
+          },
+ */
+    obj['stats'].forEach((curr,i) => {
+        const list = document.createElement('ul')
+        const liStat = document.createElement('li')
+        const liEffort = document.createElement('li')
+        const liBase = document.createElement('li')
+        const baseStat = document.createElement('p');
+        const effort = document.createElement('p');
+            const stat = document.createElement('p');
+            
+          for(let key in curr){
+      
+            baseStat.textContent = obj['stats'][i]['base_stat'];
+            effort.textContent = obj['stats'][i]['effort'];
+            stat.textContent = obj['stats'][i]['stat']['name'];
+
+            liBase.append(baseStat)
+            liEffort.append(effort)
+            liStat.append(stat)      
+          }
+          list.append(liBase)
+            list.append(liEffort)
+            list.append(liStat)
+          stats.append(list)
+    })
+/**
+ * "abilities": [
+          {
+            "name": "blaze"
+          },
+          {
+            "name": "solar-power"
+          }
+        ],
+ */
+const abilitiesUl = document.createElement('ul')
+
+ obj['abilities'].forEach((obj,i) => {
+  const name = document.createElement('p')
+
+    const li = document.createElement('li')
+    name.textContent = obj['name']
+    li.append(name)
+    
+  abilitiesUl.append(li)
+ })
+
+ abilities.append(abilitiesUl)
+
+    
+
+
 }
+createStats(char)
