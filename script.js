@@ -343,15 +343,15 @@ createStats(char)
 const solution = function(num){
   const arr = Array.from({length:num},(_,i) => {
       return i
-  })
-  const answer = arr.filter((curr) => {
+  }).filter((curr) => {
     if(curr % 3 == 0 || curr % 5 == 0){
       return curr
     }
   }).reduce((acc,curr) => {
     return acc + curr
   },0)
-  return answer
+  
+  return arr
 }
 //3,5
 console.log(solution(10))
