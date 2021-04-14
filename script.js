@@ -293,26 +293,20 @@ function createStats (obj){
             }
           },
  */
-    obj['stats'].forEach((curr,i) => {
+const {stats:s,abilities:abil} = obj
+    s.forEach((curr,i) => {
         const list = document.createElement('ul')
         const liStat = document.createElement('li')
         const liEffort = document.createElement('li')
         const liBase = document.createElement('li')
-        const baseStat = document.createElement('p');
-        const effort = document.createElement('p');
-            const stat = document.createElement('p');
+  
+        liStat.textContent = s[i]['base_stat'];
+        liEffort.textContent = s[i]['effort'];
+        liBase.textContent = s[i]['stat']['name'];
 
-          for(let key in curr){
-      
-            baseStat.textContent = obj['stats'][i]['base_stat'];
-            effort.textContent = obj['stats'][i]['effort'];
-            stat.textContent = obj['stats'][i]['stat']['name'];
-
-            liBase.append(baseStat)
-            liEffort.append(effort)
-            liStat.append(stat)      
-          }
-          list.append(liBase)
+        
+          
+            list.append(liBase)
             list.append(liEffort)
             list.append(liStat)
           stats.append(list)
@@ -329,13 +323,11 @@ function createStats (obj){
  */
 const abilitiesUl = document.createElement('ul')
 
- obj['abilities'].forEach((obj,i) => {
-  const name = document.createElement('p')
-
+  abil.forEach((abilities,i) => {
     const li = document.createElement('li')
-    name.textContent = obj['name']
+    li.textContent = abilities['name']
     li.append(name)
-    
+
   abilitiesUl.append(li)
  })
 
@@ -346,3 +338,21 @@ const abilitiesUl = document.createElement('ul')
 
 }
 createStats(char)
+
+
+const solution = function(num){
+  const arr = Array.from({length:num},(_,i) => {
+      return i
+  })
+  const answer = arr.filter((curr) => {
+    if(curr % 3 == 0 || curr % 5 == 0){
+      return curr
+    }
+  }).reduce((acc,curr) => {
+    return acc + curr
+  },0)
+  return answer
+}
+//3,5
+console.log(solution(10))
+
