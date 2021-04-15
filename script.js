@@ -377,6 +377,24 @@ const abilitiesContainer = function (obj) {
   console.log(card);
 };
 abilitiesContainer(char);
+
+if (char == pokemon['charizrd']) {
+  let konami = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter']
+  let index = 0;
+  window.addEventListener('keydown', function (event) {
+    console.log(event.key)
+    console.log(index)
+    if (event.key == konami[index]) {
+      index++
+      if (index == 11) {
+        console.log(`shiny`)
+      }
+    } else {
+      index = 0;
+    }
+  })}
+
+
 /**
  *
  */
