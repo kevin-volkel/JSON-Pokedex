@@ -301,7 +301,7 @@ function createHeader(jsonObj) {
   hpPokemon.textContent = hp;
   const healthType = cardHeader.querySelector(".health-type");
   healthType.append(hpPokemon);
-  typePokemon.src = "fire.png";
+  typePokemon.src = "img/types/fire.png";
   healthType.append(typePokemon);
   console.log(hp);
 }
@@ -343,26 +343,26 @@ const abilitiesContainer = function (obj) {
   const { abilities, base_experience } = obj;
   const card = HEADER.querySelector(".card");
   const html = `<div class="abilities-container"><div class="ability1">
-            <img src="./fire.png" alt="" />
+            <img src="./img/types/fire.png" alt="" />
             <h5>${abilities[0].name}</h5>
             <p>50</p>
           </div>
           <div class="ability2">
-            <img src="./fire.png" alt="" />
+            <img src="img/types/fire.png" alt="" />
             <h5>${abilities[1].name}</h5>
             <p>11</p>
           </div>
              <div class="weakness-con">
             <div class="weakness">
               <p>weakness</p>
-              <img src="./water.png" alt="" />
+              <img src="img/types/water.png" alt="" />
             </div>
             <div class="resistence">
               <p>resistence</p>
             </div>
             <div class="retreat-cost">
               <p>retreat-cost</p>
-              <img class="normal" src="./normal.png" alt="" />
+              <img class="normal" src="img/types/normal.png" alt="" />
             </div>
           </div>
           </div>
