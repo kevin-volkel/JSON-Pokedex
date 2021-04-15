@@ -104,23 +104,22 @@
         .back {
           position: relative;
           z-index: 100;
-          font-size: 30px;
+          font-size: 34px;
           background-color: transparent;
           border: none;
           outline: none;
           cursor: pointer;
-          color: rgb(102, 102, 101);
+          color: black;
         }
         .forward {
           position: relative;
           z-index: 100;
-          font-size: 30px;
+          font-size: 34px;
           background-color: transparent;
           outline: none;
           border: none;
           cursor: pointer;
-          color: rgb(85, 84, 85);
-
+          color: black;
         }
       }
     }
@@ -136,7 +135,7 @@
     width: 60vw;
     height: 100vh;
     position: relative;
-    background: linear-gradient(to right, rgb(245, 111, 111), plum);
+    background: linear-gradient(100deg, rgb(245, 111, 111), rgb(102, 155, 224));
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
     margin: 0px;
 
@@ -215,7 +214,6 @@
   .half .text-container {
     position: absolute;
     top: 22%;
-    left: 50px;
   }
   .half .text-container .para {
     margin-bottom: 30px;
@@ -228,24 +226,21 @@
   .half .slider-con {
     position: absolute;
     bottom: 40px;
-    left: 50px;
   }
 
   .logo-container {
     position: absolute;
-  left: 20px;
-  top: 20px;
+    left: 20px;
+    top: 20px;
   }
 }
-
 
 @media only screen and(max-height:780px) {
   .half {
     .text-container {
       position: absolute;
       top: 17%;
-      left: 75px;
-      .title{
+      .title {
         margin-bottom: 10px;
       }
       .para {
@@ -256,8 +251,8 @@
     }
     .logo-container {
       position: absolute;
-    left: 20px;
-    top: 20px;
+      left: 20px;
+      top: 20px;
       img {
         height: 50px;
       }
@@ -265,24 +260,23 @@
     .slider-con {
       position: absolute;
       bottom: 40px;
-      left: 75px;
       .slider {
         width: 300px;
         height: 150px;
 
         .card {
           width: 300px;
-          img{
+          img {
             margin-left: 15px;
             margin-bottom: 70px;
             height: 90px;
           }
         }
-        .btn-container{
-          .forward{
+        .btn-container {
+          .forward {
             font-size: 29px;
           }
-          .back{
+          .back {
             font-size: 29px;
           }
         }
@@ -304,9 +298,9 @@ strong {
   color: rgb(180, 157, 126);
 }
 
-footer{
-  background-color: #6A6F70;
-  color: #E5E0DF;
+footer {
+  background-color: #6a6f70;
+  color: #e5e0df;
   display: flex;
   justify-content: space-between;
 }
