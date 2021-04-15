@@ -240,7 +240,7 @@ function createHeader(jsonObj) {
     "card",
     ["card-header", ["name", "name-id"], ["health-type"]],
   ];
-  const { id, name: n, type } = jsonObj;
+  const { id, name: n, types } = jsonObj;
   let hp;
   switch (n) {
     case "charmander":
@@ -253,6 +253,8 @@ function createHeader(jsonObj) {
       hp = 120;
       break;
   }
+
+
 
   //creating div elements and adding the class names
   const [cardConatiner, card, ...divs] = new Array(headerClass.flat(2).length)
@@ -293,16 +295,22 @@ function createHeader(jsonObj) {
   HEADER.append(cardConatiner);
   console.log(card);
 
-  let [hpPokemon, typePokemon] = [
+  let [hpPokemon] = [
     document.createElement("p"),
-    document.createElement("img"),
+    
   ];
-
-  hpPokemon.textContent = hp;
   const healthType = cardHeader.querySelector(".health-type");
   healthType.append(hpPokemon);
-  typePokemon.src = "img/types/fire.png";
+
+  types.forEach((curr) => {
+   const typePokemon = document.createElement("img");
+   typePokemon.src =  `img/types/${curr.type.name}.png`
+    console.log(curr.type.name)
   healthType.append(typePokemon);
+  })
+
+  hpPokemon.textContent = hp;
+  
   console.log(hp);
 }
 createHeader(char);
@@ -358,7 +366,7 @@ const abilitiesContainer = function (obj) {
               <img src="img/types/water.png" alt="" />
             </div>
             <div class="resistence">
-              <p>resistence</p>
+              <p>resistance</p>
             </div>
             <div class="retreat-cost">
               <p>retreat-cost</p>
@@ -377,6 +385,13 @@ const abilitiesContainer = function (obj) {
   console.log(card);
 };
 abilitiesContainer(char);
+
+const createStats = function(obj){
+
+
+
+
+}
 /**
  *
  */
