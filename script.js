@@ -283,7 +283,7 @@ function createHeader(jsonObj) {
 
   p.textContent = id;
   name.append(p);
-  pokeName.textContent = n;
+  pokeName.textContent = n[0].toUpperCase() + n.slice(1);
 
   name.append(cardHeader.querySelector(".name"));
 
