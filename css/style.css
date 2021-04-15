@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@600&display=swap");
 *,
 *::before,
@@ -38,6 +40,8 @@
   width: 500px;
   text-align: left;
   margin-bottom: 30px;
+  font-family: 'Anton', sans-serif;
+  font-weight: lighter;
   font-size: 3.9rem;
   letter-spacing: 2.2px;
   color: #2e2e2e;
