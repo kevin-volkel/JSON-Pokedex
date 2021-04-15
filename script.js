@@ -377,7 +377,7 @@ const abilitiesContainer = function (obj) {
 
            <div class="footer">
           <div class="baseEx">
-            <p>Base Experience ${base_experience}</p>
+            <p><div class = "color">Base Experience ${base_experience}</div></p>
           </div>
         </div>
         `;
