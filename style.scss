@@ -110,13 +110,12 @@
         .forward {
           position: relative;
           z-index: 100;
-          font-size: 34x;
+          font-size: 34px;
           background-color: transparent;
           outline: none;
           border: none;
           cursor: pointer;
           color: black;
-
         }
       }
     }
@@ -211,7 +210,6 @@
   .half .text-container {
     position: absolute;
     top: 22%;
-    left: 50px;
   }
   .half .text-container .para {
     margin-bottom: 30px;
@@ -224,24 +222,21 @@
   .half .slider-con {
     position: absolute;
     bottom: 40px;
-    left: 50px;
   }
 
   .logo-container {
     position: absolute;
-  left: 20px;
-  top: 20px;
+    left: 20px;
+    top: 20px;
   }
 }
-
 
 @media only screen and(max-height:780px) {
   .half {
     .text-container {
       position: absolute;
       top: 17%;
-      left: 75px;
-      .title{
+      .title {
         margin-bottom: 10px;
       }
       .para {
@@ -252,8 +247,8 @@
     }
     .logo-container {
       position: absolute;
-    left: 20px;
-    top: 20px;
+      left: 20px;
+      top: 20px;
       img {
         height: 50px;
       }
@@ -261,24 +256,23 @@
     .slider-con {
       position: absolute;
       bottom: 40px;
-      left: 75px;
       .slider {
         width: 300px;
         height: 150px;
 
         .card {
           width: 300px;
-          img{
+          img {
             margin-left: 15px;
             margin-bottom: 70px;
             height: 90px;
           }
         }
-        .btn-container{
-          .forward{
+        .btn-container {
+          .forward {
             font-size: 29px;
           }
-          .back{
+          .back {
             font-size: 29px;
           }
         }
@@ -300,9 +294,9 @@ strong {
   color: rgb(180, 157, 126);
 }
 
-footer{
-  background-color: #6A6F70;
-  color: #E5E0DF;
+footer {
+  background-color: #6a6f70;
+  color: #e5e0df;
   display: flex;
   justify-content: space-between;
 }

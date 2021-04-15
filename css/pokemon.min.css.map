@@ -5,5 +5,5 @@
         "../pokemon.scss"
     ],
     "names": [],
-    "file": "pokemon.css"
+    "file": "pokemon.min.css"
 }

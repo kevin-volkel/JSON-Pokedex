@@ -1,24 +1,26 @@
-*, *::after, *::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-$yellowBorder:#FEE068;
-$cardBc:#F24738;
+$yellowBorder: #fee068;
+$cardBc: #f24738;
 
-.card-container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .card{
-        width: 340px;
-        height: 530px;
-        background-image: url(pasty.png);
-        background-size: cover;
-        background-position: left,top;
-        border:13px $yellowBorder solid;
-        border-radius: 10px;
-    }
+.card-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    width: 340px;
+    height: 530px;
+    background-image: url(pasty-card.png);
+    background-size: cover;
+    background-position: center;
+    border: 13px $yellowBorder solid;
+    border-radius: 10px;
+  }
 }
