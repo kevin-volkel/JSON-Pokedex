@@ -10,7 +10,7 @@ let pokemon = {
       },
     ],
     base_experience: 62,
-    height: "2′ 0″",
+    height: 6,
     id: 4,
     is_default: true,
     name: "charmander",
@@ -84,7 +84,7 @@ let pokemon = {
     id: 5,
     is_default: true,
     name: "charmeleon",
-    height: "3′ 7″",
+    height: 11,
     order: 6,
     stats: [
       {
@@ -151,7 +151,7 @@ let pokemon = {
       },
     ],
     base_experience: 240,
-    height: "5′ 7″",
+    height: 17,
     id: 6,
     is_default: true,
     name: "charizard",
