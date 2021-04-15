@@ -81,14 +81,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #da180a;
-  font-size: 26px;
+  color: #ff1100;
+  font-size: 28px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .card-container .card .card-header .health-type p {
+  -webkit-text-stroke: 0.5px black;
   padding-right: 3px;
 }
 
