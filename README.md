@@ -25,3 +25,4 @@
 - Agreed on the theme of the pokepages
 - Found new and better images for the cards
 - Finalized and implemented the chosen fonts
+- Found better icons for the types
