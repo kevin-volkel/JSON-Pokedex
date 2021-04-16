@@ -339,6 +339,7 @@ const createImg = function (obj) {
 
   const imgPokemon = document.createElement("img");
   imgPokemon.src = `img/${n}-card.png`;
+  imgPokemon.id = 'picture'
 
   image.append(imgPokemon);
 
@@ -395,13 +396,17 @@ if (char == pokemon['charizrd']) {
     if (event.key == konami[index]) {
       index++
       if (index == 11) {
-        console.log(`shiny`)
+        makeShiny();
       }
     } else {
       index = 0;
     }
   })}
 
+const makeShiny = () => {
+  let picture = document.getElementById('picture');
+  picture.src = 'img/shiny-charizard-card.png'
+}
 
 const createStats = function(obj){
 
