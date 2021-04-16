@@ -283,4 +283,42 @@ img {
   border: 1px black solid;
   background-color: white;
 }
+
+.color {
+  color: #3b3b3b;
+}
+
+.nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 5vw;
+  background-color: orange;
+}
+
+.nav ul {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav ul li {
+  list-style: none;
+}
+
+.nav ul li a img {
+  height: 70px;
+}
 /*# sourceMappingURL=pokemon.css.map */
