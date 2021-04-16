@@ -322,4 +322,8 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
+.card-container {
+  position: relative;
+}
 /*# sourceMappingURL=style.css.map */

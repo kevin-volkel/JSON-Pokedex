@@ -258,13 +258,19 @@ $(function(){
         if(event.key == ' '){
             if(!shown){
                 $('#grid').animate({
-                    bottom: '50vh'
-                }, 3000)
+                  bottom: '60vh'
+                }, 500)
                 shown = true;
+                $('.card').animate({
+                  top: '100vh'
+                }, 500)
             }else{
                 $('#grid').animate({
                     bottom: '0'
-                }, 3000)
+                }, 500)
+                $('.card').animate({
+                  top: '0'
+                }, 500)
                 shown = false;
             }
             
