@@ -221,9 +221,9 @@ let pokemon = {
 let path = window.location.pathname;
 let [pathName] = path.split("/").pop().split(".");
 
-console.log(pathName);
+// console.log(pathName);
 let char = pokemon[pathName];
-console.log(char);
+// console.log(char);
 
 const SECTION = document.getElementById("section");
 const HEADER = document.getElementById("header");
@@ -293,7 +293,7 @@ function createHeader(jsonObj) {
   cardConatiner.append(card);
 
   HEADER.append(cardConatiner);
-  console.log(card);
+  // console.log(card);
 
   let [hpPokemon] = [
     document.createElement("p"),
@@ -305,13 +305,13 @@ function createHeader(jsonObj) {
   types.forEach((curr) => {
    const typePokemon = document.createElement("img");
    typePokemon.src =  `img/types/${curr.type.name}.png`
-    console.log(curr.type.name)
+    // console.log(curr.type.name)
   healthType.append(typePokemon);
   })
 
   hpPokemon.textContent = hp;
   
-  console.log(hp);
+  // console.log(hp);
 }
 createHeader(char);
 
@@ -333,7 +333,7 @@ const createImg = function (obj) {
   });
 
   const p = image.querySelector(".p");
-  p.textContent = `Lizard Pokemon. Length: ${height},Weight: ${w} ibs`;
+  p.textContent = `Lizard Pokemon. Height: ${(height * 0.1).toFixed(1)}m ,Weight: ${(w * 0.1).toFixed(1)} kg`;
   const huewei = image.querySelector(".heiwei-con");
   huewei.append(p);
 
@@ -383,7 +383,7 @@ const abilitiesContainer = function (obj) {
         </div>
         `;
   card.insertAdjacentHTML("afterbegin", html);
-  console.log(card);
+  // console.log(card);
 };
 abilitiesContainer(char);
 
@@ -391,8 +391,6 @@ if (char == pokemon['charizrd']) {
   let konami = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter']
   let index = 0;
   window.addEventListener('keydown', function (event) {
-    console.log(event.key)
-    console.log(index)
     if (event.key == konami[index]) {
       index++
       if (index == 11) {

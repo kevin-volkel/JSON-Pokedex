@@ -14,6 +14,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 .card-container {
@@ -264,5 +265,22 @@ img {
 
 .color {
   color: white;
+}
+
+#grid {
+  display: -ms-grid;
+  display: grid;
+  width: 18rem;
+  -ms-grid-columns: 8rem 5rem 5rem;
+      grid-template-columns: 8rem 5rem 5rem;
+  border: 1px black solid;
+  margin: 0 auto;
+  position: relative;
+  z-index: 420;
+}
+
+#grid p {
+  border: 1px black solid;
+  background-color: white;
 }
 /*# sourceMappingURL=pokemon.css.map */
