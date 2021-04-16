@@ -40,7 +40,7 @@
   width: 500px;
   text-align: left;
   margin-bottom: 30px;
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
   font-weight: lighter;
   font-size: 3.9rem;
   letter-spacing: 2.2px;
@@ -165,7 +165,7 @@
   width: 60vw;
   height: 100vh;
   position: relative;
-  background: linear-gradient(100deg, #f56f6f, #669be0);
+  background: linear-gradient(100deg, #f56f6f, #e0668f);
   -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
   margin: 0px;

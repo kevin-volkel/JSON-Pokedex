@@ -9,10 +9,11 @@
 }
 
 body {
-  background-color: #d5ffad;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23d4ffaa'/%3E%3Cstop offset='1' stop-color='%23d4ffaa' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23c9ffb5'/%3E%3Cstop offset='1' stop-color='%23c9ffb5' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23c8ffb3'/%3E%3Cstop offset='1' stop-color='%23c8ffb3' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23d5ffad'/%3E%3Cstop offset='1' stop-color='%23d5ffad' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23d4ffa8'/%3E%3Cstop offset='1' stop-color='%23d4ffa8' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23c0ffbd'/%3E%3Cstop offset='1' stop-color='%23c0ffbd' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+  background-color: #fa0000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect fill='none' stroke-width='117.6' stroke-opacity='0.16' id='a' x='-400' y='-300' width='800' height='600'/%3E%3C/defs%3E%3Cg transform='scale(0.766)' style='transform-origin:center'%3E%3Cg transform='rotate(59.4 0 0)' style='transform-origin:center'%3E%3Cg transform='rotate(-160 0 0)' style='transform-origin:center'%3E%3Cg transform='translate(1000 750)'%3E%3Cuse stroke='%23dcb52a' href='%23a' transform='rotate(10 0 0) scale(1.1)'/%3E%3Cuse stroke='%23dfb228' href='%23a' transform='rotate(20 0 0) scale(1.2)'/%3E%3Cuse stroke='%23e1b026' href='%23a' transform='rotate(30 0 0) scale(1.3)'/%3E%3Cuse stroke='%23e4ad25' href='%23a' transform='rotate(40 0 0) scale(1.4)'/%3E%3Cuse stroke='%23e6aa23' href='%23a' transform='rotate(50 0 0) scale(1.5)'/%3E%3Cuse stroke='%23e9a721' href='%23a' transform='rotate(60 0 0) scale(1.6)'/%3E%3Cuse stroke='%23eba41f' href='%23a' transform='rotate(70 0 0) scale(1.7)'/%3E%3Cuse stroke='%23eea11d' href='%23a' transform='rotate(80 0 0) scale(1.8)'/%3E%3Cuse stroke='%23f09e1b' href='%23a' transform='rotate(90 0 0) scale(1.9)'/%3E%3Cuse stroke='%23f29b19' href='%23a' transform='rotate(100 0 0) scale(2)'/%3E%3Cuse stroke='%23f49817' href='%23a' transform='rotate(110 0 0) scale(2.1)'/%3E%3Cuse stroke='%23f79514' href='%23a' transform='rotate(120 0 0) scale(2.2)'/%3E%3Cuse stroke='%23f99212' href='%23a' transform='rotate(130 0 0) scale(2.3)'/%3E%3Cuse stroke='%23fb8f10' href='%23a' transform='rotate(140 0 0) scale(2.4)'/%3E%3Cuse stroke='%23fd8b0d' href='%23a' transform='rotate(150 0 0) scale(2.5)'/%3E%3Cuse stroke='%23ff880a' href='%23a' transform='rotate(160 0 0) scale(2.6)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 }
 
 .card-container {
@@ -31,10 +32,10 @@ body {
 
 .card-container .card {
   width: 340px;
-  height: 560px;
+  height: 530px;
   background-image: url(pasty-card.png);
   background-size: cover;
-  background-position: center;
+  background-position: left;
   border: 15px #face30 solid;
   border-radius: 10px;
   position: relative;
@@ -80,18 +81,30 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #ac0b00;
-  font-size: 20px;
+  color: #ff1100;
+  font-size: 28px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 10px;
 }
 
 .card-container .card .card-header .health-type p {
+  -webkit-text-stroke: 0.5px black;
   padding-right: 3px;
 }
 
 .card-container .card .card-header .health-type img {
-  height: 20px;
-  padding-right: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 30px;
   padding-left: 3px;
+  padding-left: 3px;
+}
+
+.card-container .card .card-header .health-type img:nth-of-type(2) {
+  margin-bottom: 1.6px;
 }
 
 .card-container .card .image {
@@ -144,6 +157,7 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 260px;
+  text-transform: capitalize;
 }
 
 .card-container .card .abilities-container .ability1 {
@@ -163,7 +177,7 @@ body {
 }
 
 .card-container .card .abilities-container .ability1 img {
-  height: 20px;
+  height: 30px;
   position: relative;
   z-index: 100;
 }
@@ -184,7 +198,7 @@ body {
 }
 
 .card-container .card .abilities-container .ability2 img {
-  height: 20px;
+  height: 30px;
   position: relative;
   z-index: 100;
 }
@@ -216,10 +230,6 @@ body {
           align-items: center;
 }
 
-.card-container .card .abilities-container .weakness-con .weakness p {
-  margin-bottom: 3px;
-}
-
 .card-container .card .abilities-container .weakness-con .retreat-cost {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -231,10 +241,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.card-container .card .abilities-container .weakness-con .retreat-cost p {
-  margin-bottom: 3px;
 }
 
 .card-container .card .footer {
@@ -253,6 +259,44 @@ body {
 }
 
 img {
-  height: 20px;
+  height: 30px;
+}
+
+.color {
+  color: #3b3b3b;
+}
+
+.nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 5vw;
+  background-color: orange;
+}
+
+.nav ul {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav ul li {
+  list-style: none;
+}
+
+.nav ul li a img {
+  height: 70px;
 }
 /*# sourceMappingURL=pokemon.min.css.map */
