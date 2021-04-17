@@ -73,6 +73,7 @@
       overflow: hidden;
       border-radius: 15px;
       .card {
+        
         position: absolute;
         width: 100%;
         top: 0;
@@ -303,4 +304,8 @@ footer {
   color: #e5e0df;
   display: flex;
   justify-content: space-between;
+}
+
+.card-container{
+  position: relative;
 }

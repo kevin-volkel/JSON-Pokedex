@@ -304,16 +304,8 @@ img {
   bottom: 0;
   left: 0;
   height: 100vh;
-  width: 147px;
-  background-color: #eeae23;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-transition: width 300ms ease;
-  transition: width 300ms ease;
+  width: 80px;
+  background-color: orange;
 }
 
 .nav ul {

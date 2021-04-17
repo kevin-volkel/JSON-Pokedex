@@ -253,26 +253,27 @@ $(function () {
   }
   body.appendChild(GRID);
 
-  let shown = false;
-  $("#body").on("keypress", function (event) {
-    if (event.key == " ") {
-      if (!shown) {
-        $("#grid").animate(
-          {
-            bottom: "60vh",
-          },
-          2000
-        );
-        shown = true;
-      } else {
-        $("#grid").animate(
-          {
-            bottom: "0",
-          },
-          2000
-        );
-        shown = false;
-      }
-    }
-  });
-});
+    let shown = false;
+    $('#body').on('keypress', function (event){
+        if(event.key == ' '){
+            if(!shown){
+                $('#grid').animate({
+                  bottom: '60vh'
+                }, 500)
+                shown = true;
+                $('.card').animate({
+                  top: '100vh'
+                }, 500)
+            }else{
+                $('#grid').animate({
+                    bottom: '0'
+                }, 500)
+                $('.card').animate({
+                  top: '0'
+                }, 500)
+                shown = false;
+            }
+            
+        }
+    })
+})
