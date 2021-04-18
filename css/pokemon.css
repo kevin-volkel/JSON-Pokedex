@@ -304,8 +304,10 @@ img {
   bottom: 0;
   left: 0;
   height: 100vh;
-  width: 80px;
+  width: 147px;
   background-color: orange;
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
 }
 
 .nav ul {
@@ -341,7 +343,6 @@ img {
   width: 100%;
   -webkit-transition: 200ms;
   transition: 200ms;
-  margin-bottom: 20px;
 }
 
 .nav li:first-child {
@@ -359,9 +360,14 @@ img {
   background-color: #d69316;
 }
 
+.nav li:first-child:hover {
+  background-color: #d69316;
+}
+
 .nav li:first-child img {
   cursor: pointer;
   height: 55px;
+  background-color: transparent;
 }
 
 .nav li a {
@@ -382,7 +388,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #f50404;
+  color: black;
   font-size: 19px;
 }
 
@@ -402,6 +408,10 @@ img {
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
   z-index: 1000;
+}
+
+.nav li:hover {
+  background-color: #f11f1f;
 }
 
 .nav:hover {
