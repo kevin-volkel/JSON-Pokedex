@@ -213,7 +213,7 @@ img {
     border: 1px black solid;
     background-color: white;
     text-transform: capitalize;
-    font-size: 20px;;
+    font-size: 18px;;
     display: flex;
     height: 3rem;
     width: 100%;
@@ -223,11 +223,11 @@ img {
     &:nth-child(1),&:nth-child(2),&:nth-child(3){
       background-color:rgb(253, 238, 99);
       height: 60px;
-      font-size: 24px;
+      font-size: 20px;
       width: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center;  
       color: rgb(0, 0, 0);
       font-weight: bolder;
   }

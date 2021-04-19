@@ -302,7 +302,7 @@ img {
   border: 1px black solid;
   background-color: white;
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,7 +319,7 @@ img {
 #grid p:nth-child(1), #grid p:nth-child(2), #grid p:nth-child(3) {
   background-color: #fdee63;
   height: 60px;
-  font-size: 24px;
+  font-size: 20px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
