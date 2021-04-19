@@ -346,13 +346,6 @@ const createImg = function (obj) {
 };
 createImg(char);
 
-const HINTDIV = document.createElement('div')
-HINTDIV.id = "hintdiv"
-const TEXTBOX = document.createElement('img')
-TEXTBOX.src = 'img/text_box.png';
-HINTDIV.appendChild(TEXTBOX)
-body.appendChild(HINTDIV)
-
 const abilitiesContainer = function (obj) {
   const { abilities, base_experience } = obj;
   const card = HEADER.querySelector(".card");
