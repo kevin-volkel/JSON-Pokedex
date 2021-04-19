@@ -259,7 +259,7 @@ $(function () {
         if(event.key == ' '){
             if(!shown){
                 $('#grid').animate({
-                  bottom: '60vh'
+                  bottom: '65vh'
                 }, 500)
                 shown = true;
                 $('.card').animate({

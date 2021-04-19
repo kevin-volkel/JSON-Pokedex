@@ -196,15 +196,30 @@ img {
 
 #grid {
   display: grid;
-  width: 18rem;
-  grid-template-columns: 8rem 5rem 5rem;
-  border: 1px black solid;
+  width: 20rem;
+  grid-template-columns: 12rem 7rem 7rem;
   margin: 0 auto;
   position: relative;
   z-index: 420;
   p {
     border: 1px black solid;
     background-color: white;
+    text-transform: capitalize;
+    display: flex;
+    height: 2rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(1),&:nth-child(2),&:nth-child(3){
+      background-color:rgb(253, 139, 32);
+      height: 45px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+  }
   }
 }
 
