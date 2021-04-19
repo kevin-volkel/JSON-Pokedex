@@ -239,10 +239,12 @@ img {
     &:first-child {
       height: 110px;
       display: flex;
+      margin-left: 75px;
+      width: 100%;
       align-items: center;
       justify-content: center;
       margin-bottom: 0px;
-      background-color: rgb(214, 147, 22);
+      // background-color: rgb(214, 147, 22);
       &:hover {
         background-color: rgb(214, 147, 22);
       }
