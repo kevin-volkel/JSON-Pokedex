@@ -219,6 +219,7 @@ $(function () {
     },
   };
 
+  
   let path = window.location.pathname;
   let [pathName] = path.split("/").pop().split(".");
 
