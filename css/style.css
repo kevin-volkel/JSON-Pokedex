@@ -11,6 +11,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
+html {
+  overflow: hidden;
+}
+
 .half {
   width: 56.5vw;
   height: 100vh;
@@ -274,7 +278,7 @@
   }
   .half .slider-con {
     position: absolute;
-    bottom: 40px;
+    bottom: 80px;
   }
   .half .slider-con .slider {
     width: 300px;
@@ -321,6 +325,8 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  bottom: 22px;
 }
 
 .card-container {

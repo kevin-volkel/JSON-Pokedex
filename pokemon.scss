@@ -270,6 +270,7 @@ img {
       img {
         height: 110px;
         filter: grayscale(100%);
+        transition: all 0.5s ease;
         position: relative;
       }
     }

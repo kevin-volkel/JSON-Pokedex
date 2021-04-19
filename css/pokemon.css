@@ -401,6 +401,8 @@ img {
   height: 110px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   position: relative;
 }
 

@@ -26,3 +26,7 @@
 - Found new and better images for the cards
 - Finalized and implemented the chosen fonts
 - Found better icons for the types
+#### **Day Five**
+---
+- Made a grid to store the stats
+- Made a navbar to switch between pages.
