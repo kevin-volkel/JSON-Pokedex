@@ -219,7 +219,8 @@ $(function () {
     },
   };
 
-  
+  // let container = document.querySelector('.card-container');
+  let flexCon = document.querySelector('.flex-stats');
   let path = window.location.pathname;
   let [pathName] = path.split("/").pop().split(".");
 
@@ -252,22 +253,22 @@ $(function () {
     EFFORT.textContent = stat["effort"];
     GRID.appendChild(EFFORT);
   }
-  body.appendChild(GRID);
+  flexCon.appendChild(GRID);
 
     let shown = false;
     $('#body').on('keypress', function (event){
         if(event.key == ' '){
             if(!shown){
-                $('#grid').animate({
-                  bottom: '65vh'
+                $(flexCon).animate({
+                  top: '50%'
                 }, 500)
                 shown = true;
                 $('.card').animate({
                   top: '100vh'
                 }, 500)
             }else{
-                $('#grid').animate({
-                    bottom: '0'
+                $(flexCon).animate({
+                    top: '-50%'
                 }, 500)
                 $('.card').animate({
                   top: '0'
