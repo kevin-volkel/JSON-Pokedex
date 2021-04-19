@@ -9,16 +9,18 @@ const sliderComponent = function () {
   const sliderDirection = function (slide) {
     slides.forEach(function (s, i) {
       s.style.transform = `translateX(${100 * (i - slide)}%)`;
-      console.log(s, i);
+      // console.log(s, i);
     });
   };
   const nextSlide = function () {
+    
     if (curSlide === maxSlide) {
       curSlide = 0;
     } else {
       curSlide++;
     }
     sliderDirection(curSlide);
+console.log(curSlide);
   };
   //Next slide
 
@@ -49,7 +51,8 @@ const sliderComponent = function () {
 };
 sliderComponent();
 
-
-const str = 'joshua'
-const reverseStr = str.split('').reverse().join('')
-console.log(reverseStr)
+let pokemon = ['charmander', 'charmeleon', 'charizrd']
+function goTo(){
+  document.location.href = `/${pokemon[curSlide]}.html`
+}
+clickBelow.onclick = goTo;

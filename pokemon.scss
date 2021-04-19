@@ -239,13 +239,13 @@ img {
     &:first-child {
       height: 110px;
       display: flex;
-      margin-left: 75px;
+      padding-left: 37.5px;
       width: 100%;
       align-items: center;
       justify-content: center;
       margin-bottom: 0px;
       &:hover {
-        background-color: transparent;
+        background-color: rgba(0, 0, 0, 0.226);
       }
       img {
         cursor: pointer;
@@ -281,7 +281,7 @@ img {
     z-index: 1000;
   }
   li:hover {
-    background-color: rgb(241, 31, 31);
+    background-color: rgba(0, 0, 0, 0.226);
   }
   &:hover {
     width: 18.5rem;
@@ -297,4 +297,14 @@ img {
 }
 .nav:hover .lg {
   transform: rotate(-360deg);
+}
+
+#hintdiv{
+  position: relative;
+  bottom: 50vh;
+  left: 65vw;
+  img{
+    width: 30rem;
+    height: 12rem;
+  }
 }
