@@ -272,7 +272,7 @@ body {
 
 .flex-stats {
   position: absolute;
-  left: 44%;
+  left: 40%;
   top: -50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -291,8 +291,8 @@ img {
   display: grid;
   width: 20rem;
   border-radius: 20px;
-  -ms-grid-columns: 17rem 7rem 7rem;
-      grid-template-columns: 17rem 7rem 7rem;
+  -ms-grid-columns: 20rem 10rem 10rem;
+      grid-template-columns: 20rem 10rem 10rem;
   margin: 0 auto;
   position: relative;
   z-index: 420;
@@ -302,6 +302,7 @@ img {
   border: 1px black solid;
   background-color: white;
   text-transform: capitalize;
+  font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,6 +319,7 @@ img {
 #grid p:nth-child(1), #grid p:nth-child(2), #grid p:nth-child(3) {
   background-color: #fdee63;
   height: 60px;
+  font-size: 24px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

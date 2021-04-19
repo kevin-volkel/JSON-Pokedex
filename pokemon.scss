@@ -190,7 +190,7 @@ $cardBc: #f24738;
 }
 .flex-stats{
 position: absolute;
-left: 44%;
+left: 40%;
 top: -50%;
 transform: translate(-50%,-50%);
 }
@@ -205,7 +205,7 @@ img {
   display: grid;
   width: 20rem;
   border-radius: 20px;
-  grid-template-columns: 17rem 7rem 7rem;
+  grid-template-columns: 20rem 10rem 10rem;
   margin: 0 auto;
   position: relative;
   z-index: 420;
@@ -213,6 +213,7 @@ img {
     border: 1px black solid;
     background-color: white;
     text-transform: capitalize;
+    font-size: 20px;;
     display: flex;
     height: 3rem;
     width: 100%;
@@ -222,6 +223,7 @@ img {
     &:nth-child(1),&:nth-child(2),&:nth-child(3){
       background-color:rgb(253, 238, 99);
       height: 60px;
+      font-size: 24px;
       width: 100%;
       display: flex;
       justify-content: center;
