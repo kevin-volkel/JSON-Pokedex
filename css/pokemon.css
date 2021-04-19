@@ -360,11 +360,12 @@ img {
 
 .nav {
   position: absolute;
+  border-right: solid 1px rgba(0, 0, 0, 0.26);
   bottom: 0;
   left: 0;
   height: 100vh;
   width: 147px;
-  background-color: orange;
+  background: radial-gradient(red, orange);
   -webkit-transition: width 0.2s ease;
   transition: width 0.2s ease;
 }
