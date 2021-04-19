@@ -29,4 +29,9 @@
 #### **Day Five**
 ---
 - Made a grid to store the stats
-- Made a navbar to switch between pages.
+- Made a navbar to switch between pages
+### **Day Six**
+---
+- Styled the stats grid
+- Fixed some bugs between the pages
+- Added a local storage variable to check if it's a visitor's first visit.

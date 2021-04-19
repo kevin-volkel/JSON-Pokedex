@@ -249,18 +249,8 @@ function createHeader(jsonObj) {
     ["card-header", ["name", "name-id"], ["health-type"]],
   ];
   const { id, name: n, types } = jsonObj;
-  let hp;
-  switch (n) {
-    case "charmander":
-      hp = 60;
-      break;
-    case "charmeleon":
-      hp = 90;
-      break;
-    case "charizard":
-      hp = 120;
-      break;
-  }
+  let hp = char['stats'][0]['base_stat']
+  
 
 
 
@@ -356,6 +346,13 @@ const createImg = function (obj) {
 };
 createImg(char);
 
+const HINTDIV = document.createElement('div')
+HINTDIV.id = "hintdiv"
+const TEXTBOX = document.createElement('img')
+TEXTBOX.src = 'img/text_box.png';
+HINTDIV.appendChild(TEXTBOX)
+body.appendChild(HINTDIV)
+
 const abilitiesContainer = function (obj) {
   const { abilities, base_experience } = obj;
   const card = HEADER.querySelector(".card");
@@ -412,13 +409,6 @@ if (char == pokemon['charizrd']) {
 const makeShiny = () => {
   let picture = document.getElementById('picture');
   picture.src = 'img/shiny-charizard-card.png'
-}
-
-const createStats = function(obj){
-
-
-
-
 }
 /**
  *

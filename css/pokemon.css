@@ -409,7 +409,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 75px;
+  padding-left: 37.5px;
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -421,7 +421,7 @@ img {
 }
 
 .nav li:first-child:hover {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.226);
 }
 
 .nav li:first-child img {
@@ -473,7 +473,7 @@ img {
 }
 
 .nav li:hover {
-  background-color: #f11f1f;
+  background-color: rgba(0, 0, 0, 0.226);
 }
 
 .nav:hover {
@@ -496,5 +496,16 @@ img {
 .nav:hover .lg {
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
+}
+
+#hintdiv {
+  position: relative;
+  bottom: 50vh;
+  left: 65vw;
+}
+
+#hintdiv img {
+  width: 30rem;
+  height: 12rem;
 }
 /*# sourceMappingURL=pokemon.css.map */
