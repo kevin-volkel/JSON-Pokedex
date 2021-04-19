@@ -221,6 +221,14 @@ let pokemon = {
 let path = window.location.pathname;
 let [pathName] = path.split("/").pop().split(".");
 
+let firstTime = localStorage.getItem('firstTime');
+if(firstTime == undefined){
+  setTimeout(function(){
+    localStorage.setItem('firstTime', 'false')
+    alert('Press space to show stats')
+  }, 2000)
+}
+
 // console.log(pathName);
 let char = pokemon[pathName];
 // console.log(char);

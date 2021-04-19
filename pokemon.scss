@@ -244,9 +244,8 @@ img {
       align-items: center;
       justify-content: center;
       margin-bottom: 0px;
-      // background-color: rgb(214, 147, 22);
       &:hover {
-        background-color: rgb(214, 147, 22);
+        background-color: transparent;
       }
       img {
         cursor: pointer;

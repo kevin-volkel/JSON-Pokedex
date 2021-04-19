@@ -362,7 +362,7 @@ img {
 }
 
 .nav li:first-child:hover {
-  background-color: #d69316;
+  background-color: transparent;
 }
 
 .nav li:first-child img {
