@@ -365,7 +365,7 @@ img {
   left: 0;
   height: 100vh;
   width: 147px;
-  background: #ff8716;
+  background: rgba(255, 251, 0, 0.438);
   -webkit-transition: width 0.2s ease;
   transition: width 0.2s ease;
 }
