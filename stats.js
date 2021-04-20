@@ -283,10 +283,9 @@ const statsCreater = function(obj){
         </div>
     </div>`
     statsContainer.insertAdjacentHTML('afterbegin',html)
-
   })
-
 }
+console.log(statsContainer)
 statsCreater(char)
     let shown = false;
     $('#body').on('keyup', function (event){
