@@ -219,6 +219,10 @@ $(function () {
     },
   };
 
+  let backlog = 0;
+  let delay = 500;
+  let spamChecker = setInterval(checkForSpam ,1000);
+
   // let container = document.querySelector('.card-container');
   let flexCon = document.querySelector('.flex-stats');
   let path = window.location.pathname;
@@ -256,8 +260,10 @@ $(function () {
   flexCon.appendChild(GRID);
 
     let shown = false;
-    $('#body').on('keypress', function (event){
+    $('#body').on('keyup', function (event){
         if(event.key == ' '){
+          backlog++;
+          $('#hint').fadeOut(500)
             if(!shown){
                 $(flexCon).animate({
                   top: '50%'
@@ -278,4 +284,14 @@ $(function () {
             
         }
     })
+
+  function checkForSpam(){
+    if(backlog > 10){
+      for(let i = 0; i < backlog; i++){
+        $('.card').finish()
+        $('.flex-stats').finish()
+      }
+    }
+    backlog = 0;
+  }
 })

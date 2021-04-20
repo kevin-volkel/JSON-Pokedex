@@ -35,3 +35,7 @@
 - Styled the stats grid
 - Fixed some bugs between the pages
 - Added a local storage variable to check if it's a visitor's first visit.
+### **Day Seven**
+---
+- Finished stats table
+- Added hint to tell how to show stats
