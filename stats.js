@@ -261,7 +261,19 @@ $(function () {
   const statsContainer = document.querySelector('.grid-stats-con')
   const flexContainer = document.querySelector('.container-stats')
 const statsCreater = function(obj){
-  const {stats} = obj
+  let {stats} = obj
+  let grid = [];
+
+  let order = ['hp', 'speed', 'attack', 'special-attack', 'defense', 'special-defense']
+
+  for(i of stats){
+    let stat = [];
+    stat.push(i['stat']['name']);
+    stat.push(i);
+    grid.push(stat)
+  }
+  console.log(grid)
+
 /*
    base_stat: 85,
           effort: 0,
@@ -269,22 +281,23 @@ const statsCreater = function(obj){
             name: "special-defense",
           },
    */
-  stats.forEach((stat,i) => {
-    let baseStat = stat['base_stat'];
-    let name = stat['stat'].name
-    console.log(name)
-    let html = `<div class=" box">
-    <div class="items-con">
-        <img src="./img/stats/${name}.png" alt="">
+  // for(i in order){
+  //   stat = stats[i]
+  //   let baseStat = stat['base_stat'];
+  //   let name = stat['stat'].name
+  //   console.log(name)
+  //   let html = `<div class=" box">
+  //   <div class="items-con">
+  //       <img src="./img/stats/${name}.png" alt="">
 
-        <div class="content-stat">
-            <p>${baseStat}</p>
-            <p>${name}</p>
-        </div>
-    </div>`
-    statsContainer.insertAdjacentHTML('afterbegin',html)
+  //       <div class="content-stat">
+  //           <p>${baseStat}</p>
+  //           <p>${name}</p>
+  //       </div>
+  //   </div>`
+  //   statsContainer.insertAdjacentHTML('afterbegin',html)
 
-  })
+  // }
 
 }
 statsCreater(char)
