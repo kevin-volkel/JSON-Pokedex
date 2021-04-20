@@ -219,6 +219,10 @@ $(function () {
     },
   };
 
+  let backlog = 0;
+  let delay = 500;
+  let spamChecker = setInterval(checkForSpam ,1000);
+
   // let container = document.querySelector('.card-container');
   let path = window.location.pathname;
   let [pathName] = path.split("/").pop().split(".");
@@ -285,8 +289,10 @@ const statsCreater = function(obj){
 }
 statsCreater(char)
     let shown = false;
-    $('#body').on('keypress', function (event){
+    $('#body').on('keyup', function (event){
         if(event.key == ' '){
+          backlog++;
+          $('#hint').fadeOut(500)
             if(!shown){
                 $(flexContainer).animate({
                   top: '0%'
@@ -307,4 +313,14 @@ statsCreater(char)
             
         }
     })
+
+  function checkForSpam(){
+    if(backlog > 10){
+      for(let i = 0; i < backlog; i++){
+        $('.card').finish()
+        $('.flex-stats').finish()
+      }
+    }
+    backlog = 0;
+  }
 })

@@ -258,7 +258,7 @@ img {
 }
 .nav {
   position: absolute;
-  border-right: solid 1px rgba(0, 0, 0, 0.26);
+  border-right: solid 3px rgba(0, 0, 0, 0.26);
   bottom: 0;
   left: 0;
   height: 100vh;
@@ -346,12 +346,18 @@ img {
 }
 
 #hint{
+  background-color: rgba(243, 122, 23, 0.63);
+  border: solid rgba(0, 0, 0, 0.63) 2px;
+  color: rgb(40, 40, 40);
+  line-height: 4rem;
+  text-align: center;
+  height: 4rem;
+  width: 25rem;
   position: relative;
-  bottom: 50vh;
-  left: 65vw;
-  img{
-    width: 30rem;
-    height: 12rem;
+  bottom: 15vh;
+  left: 68vw;
+  span{
+    text-transform: capitalize;
   }
 }
 .container-stats{

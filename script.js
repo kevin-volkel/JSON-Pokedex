@@ -221,13 +221,6 @@ let pokemon = {
 let path = window.location.pathname;
 let [pathName] = path.split("/").pop().split(".");
 
-let firstTime = localStorage.getItem('firstTime');
-if(firstTime == undefined){
-  setTimeout(function(){
-    localStorage.setItem('firstTime', 'false')
-    alert('Press space to show stats')
-  }, 2000)
-}
 
 // console.log(pathName);
 let char = pokemon[pathName];
@@ -407,7 +400,7 @@ const makeShiny = () => {
 const spacebarHint = () => {
   let HINT = document.createElement('div');
   HINT.id = 'hint'
-  HINT.textContent = `Press spacebar to show ${pathName}'s stats`
+  HINT.innerHTML = `Press spacebar to show <span>${pathName}'s</span> stats`
   body.appendChild(HINT)
 }
 
