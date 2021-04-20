@@ -290,16 +290,15 @@ const statsCreater = function(obj){
   //   <div class="items-con">
   //       <img src="./img/stats/${name}.png" alt="">
 
-  //       <div class="content-stat">
-  //           <p>${baseStat}</p>
-  //           <p>${name}</p>
-  //       </div>
-  //   </div>`
-  //   statsContainer.insertAdjacentHTML('afterbegin',html)
-
-  // }
-
+        <div class="content-stat">
+            <p>${baseStat}</p>
+            <p>${name}</p>
+        </div>
+    </div>`
+    statsContainer.insertAdjacentHTML('afterbegin',html)
+  })
 }
+console.log(statsContainer)
 statsCreater(char)
     let shown = false;
     $('#body').on('keyup', function (event){
