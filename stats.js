@@ -224,57 +224,86 @@ $(function () {
   let spamChecker = setInterval(checkForSpam ,1000);
 
   // let container = document.querySelector('.card-container');
-  let flexCon = document.querySelector('.flex-stats');
   let path = window.location.pathname;
   let [pathName] = path.split("/").pop().split(".");
 
   let char = pokemon[pathName];
 
-  let { stats } = char;
-  console.log(stats);
+  // let { stats } = char;
+  // console.log(stats);
 
-  const GRID = document.createElement("div");
-  GRID.id = "grid";
-  const NAME = document.createElement("p");
-  NAME.textContent = "NAME";
-  GRID.appendChild(NAME);
-  const VALUE = document.createElement("p");
-  VALUE.textContent = "VALUE";
-  GRID.appendChild(VALUE);
-  const EFFORT = document.createElement("p");
-  EFFORT.textContent = "EFFORT";
-  GRID.appendChild(EFFORT);
+  // const GRID = document.createElement("div");
+  // GRID.id = "grid";
+  // const NAME = document.createElement("p");
+  // NAME.textContent = "NAME";
+  // GRID.appendChild(NAME);
+  // const VALUE = document.createElement("p");
+  // VALUE.textContent = "VALUE";
+  // GRID.appendChild(VALUE);
+  // const EFFORT = document.createElement("p");
+  // EFFORT.textContent = "EFFORT";
+  // GRID.appendChild(EFFORT);
 
-  for (stat of stats) {
-    const NAME = document.createElement("p");
-    const VALUE = document.createElement("p");
-    const EFFORT = document.createElement("p");
+  // for (stat of stats) {
+  //   const NAME = document.createElement("p");
+  //   const VALUE = document.createElement("p");
+  //   const EFFORT = document.createElement("p");
 
-    NAME.textContent = stat["stat"]["name"];
-    GRID.appendChild(NAME);
-    VALUE.textContent = stat["base_stat"];
-    GRID.appendChild(VALUE);
-    EFFORT.textContent = stat["effort"];
-    GRID.appendChild(EFFORT);
-  }
-  flexCon.appendChild(GRID);
+  //   NAME.textContent = stat["stat"]["name"];
+  //   GRID.appendChild(NAME);
+  //   VALUE.textContent = stat["base_stat"];
+  //   GRID.appendChild(VALUE);
+  //   EFFORT.textContent = stat["effort"];
+  //   GRID.appendChild(EFFORT);
+  // }
+  // flexCon.appendChild(GRID);
 
+  const statsContainer = document.querySelector('.grid-stats-con')
+  const flexContainer = document.querySelector('.container-stats')
+const statsCreater = function(obj){
+  const {stats} = obj
+/*
+   base_stat: 85,
+          effort: 0,
+          stat: {
+            name: "special-defense",
+          },
+   */
+  stats.forEach((stat,i) => {
+    let baseStat = stat['base_stat'];
+    let name = stat['stat'].name
+    console.log(name)
+    let html = `<div class=" box">
+    <div class="items-con">
+        <img src="./img/stats/${name}.png" alt="">
+
+        <div class="content-stat">
+            <p>${baseStat}</p>
+            <p>${name}</p>
+        </div>
+    </div>`
+    statsContainer.insertAdjacentHTML('afterbegin',html)
+
+  })
+
+}
+statsCreater(char)
     let shown = false;
     $('#body').on('keyup', function (event){
         if(event.key == ' '){
           backlog++;
           $('#hint').fadeOut(500)
             if(!shown){
-                $(flexCon).animate({
-                  top: '50%'
+                $(flexContainer).animate({
+                  top: '0%'
                 }, 500)
                 shown = true;
                 $('.card').animate({
                   top: '100vh'
                 }, 500)
             }else{
-                $(flexCon).animate({
-                    top: '-50%'
+                $(flexContainer).animate({
+                    top: '-100%'
                 }, 500)
                 $('.card').animate({
                   top: '0'
