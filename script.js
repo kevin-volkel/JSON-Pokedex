@@ -403,6 +403,16 @@ const makeShiny = () => {
   let picture = document.getElementById('picture');
   picture.src = 'img/shiny-charizard-card.png'
 }
+
+const spacebarHint = () => {
+  let HINT = document.createElement('div');
+  HINT.id = 'hint'
+  HINT.textContent = `Press spacebar to show ${pathName}'s stats`
+  body.appendChild(HINT)
+}
+
+spacebarHint();
+
 /**
  *
  */

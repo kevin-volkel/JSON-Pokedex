@@ -25,7 +25,7 @@ $cardBc: #f24738;
   align-items: center;
   .card {
     width: 340px;
-    height: 560px;
+    height: 530px;
     background-image: url(pasty-card.png);
     background-size: cover;
     background-position: center;
@@ -345,7 +345,7 @@ img {
   transform: rotate(-360deg);
 }
 
-#hintdiv{
+#hint{
   position: relative;
   bottom: 50vh;
   left: 65vw;
