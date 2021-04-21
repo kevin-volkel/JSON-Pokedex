@@ -1,4 +1,5 @@
 # **JSON Pokedex**
+# *By Kevin Volkel, Joshua Ruvalcava, and Eric Thomason
 #### *The perfect place to learn more about the 3 evolutions of Charmander*
 ---
 ### <ins>Progress</ins>
