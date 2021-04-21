@@ -276,6 +276,7 @@ body {
   top: -50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  text-transform: capitalize;
 }
 
 img {
@@ -567,6 +568,7 @@ img {
 }
 
 .container-stats .grid-stats-con .box .items-con .content-stat {
+  text-transform: capitalize;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

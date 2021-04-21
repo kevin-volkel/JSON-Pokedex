@@ -264,40 +264,47 @@ const statsCreater = function(obj){
   let {stats} = obj
   let grid = [];
 
-  let order = ['hp', 'speed', 'attack', 'special-attack', 'defense', 'special-defense']
+  let order = ['special-defense', 'defense', 'special-attack', 'attack', 'speed','hp']
 
+
+  //sorting stats to be in the right order
   for(i of stats){
     let stat = [];
     stat.push(i['stat']['name']);
     stat.push(i);
     grid.push(stat)
   }
-  console.log(grid)
+  
+  let newGrid = [];
+  let item = 0;
 
-/*
-   base_stat: 85,
-          effort: 0,
-          stat: {
-            name: "special-defense",
-          },
-   */
-  // for(i in order){
-  //   stat = stats[i]
-  //   let baseStat = stat['base_stat'];
-  //   let name = stat['stat'].name
-  //   console.log(name)
-  //   let html = `<div class=" box">
-  //   <div class="items-con">
-  //       <img src="./img/stats/${name}.png" alt="">
+  for(item of order){
+    for(stat of grid){
+      if(stat[0] == item){
+        newGrid.push(stat[1])
+      }
+    }
+  }
+  console.table(newGrid)
 
+  for(i in newGrid){
+    stat = newGrid[i]
+    let baseStat = stat['base_stat'];
+    let name = stat['stat'].name
+    if(name == 'hp') name = "HP";
+    console.log(name)
+    let html = `<div class=" box">
+    <div class="items-con">
+        <img src="./img/stats/${name}.png" alt="">
         <div class="content-stat">
             <p>${baseStat}</p>
             <p>${name}</p>
         </div>
     </div>`
     statsContainer.insertAdjacentHTML('afterbegin',html)
-  })
+  }
 }
+
 console.log(statsContainer)
 statsCreater(char)
     let shown = false;
