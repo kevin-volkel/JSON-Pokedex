@@ -269,20 +269,14 @@ const statsCreater = function(obj){
 
   //sorting stats to be in the right order
   for(i of stats){
-    let stat = [];
-    stat.push(i['stat']['name']);
-    stat.push(i);
-    grid.push(stat)
+    grid.push([i['stat']['name'], i]);
   }
   
   let newGrid = [];
-  let item = 0;
 
   for(item of order){
     for(stat of grid){
-      if(stat[0] == item){
-        newGrid.push(stat[1])
-      }
+      if(stat[0] == item) newGrid.push(stat[1])
     }
   }
   console.table(newGrid)
